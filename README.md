@@ -1,59 +1,106 @@
-Brain Tumor MRI Image Classification
-Overview
-This project develops a deep learning-based solution for classifying brain MRI images into multiple tumor types. It includes a custom CNN model and a transfer learning model using ResNet50, with a Streamlit web application for real-time tumor type predictions.
-Project Structure
+🧠 Brain Tumor MRI Image Classification
+This project presents a deep learning-based solution to classify brain MRI images into multiple tumor types using both a Custom CNN and a Transfer Learning approach with ResNet50. A user-friendly Streamlit web app is included for real-time predictions.
+
+📂 Project Structure
+bash
+Copy
+Edit
 brain_tumor_classification/
 │
-├── data/                     # Dataset directory (not included in repo)
-├── models/                   # Trained models
+├── data/                       # Dataset directory (not included in repo)
+├── models/                     # Trained models
 │   ├── custom_cnn.h5
 │   └── transfer_learning_model.h5
-├── scripts/                  # Python scripts
+├── scripts/                    # Python scripts
 │   ├── data_preprocessing.py
 │   ├── model_training.py
 │   ├── model_evaluation.py
 │   └── utils.py
-├── app.py                    # Streamlit app
-├── requirements.txt          # Dependencies
-└── README.md                 # Project documentation
-
-Setup Instructions
-
-Clone the Repository:
-git clone <repository-url>
+├── app.py                      # Streamlit app
+├── requirements.txt            # Python dependencies
+└── README.md                   # Project documentation
+⚙️ Setup Instructions
+1. Clone the Repository
+bash
+Copy
+Edit
+git clone https://github.com/<your-username>/brain_tumor_classification.git
 cd brain_tumor_classification
-
-
-Install Dependencies:
+2. Install Dependencies
+bash
+Copy
+Edit
 pip install -r requirements.txt
+3. Add Dataset
+Place the Brain Tumor MRI Multi-Class Dataset inside the data/ directory. Ensure the dataset follows the format:
 
-
-Dataset:
-
-Place the Brain Tumor MRI Multi-Class Dataset in the data/ directory.
-Ensure the dataset is organized with subfolders for each tumor type.
-
-
-Run the Streamlit App:
+kotlin
+Copy
+Edit
+data/
+├── glioma/
+├── meningioma/
+├── pituitary/
+└── no_tumor/
+4. Run the Streamlit App
+bash
+Copy
+Edit
 streamlit run app.py
+🚀 Usage
+Training
+Run the following to train both models:
 
+bash
+Copy
+Edit
+python scripts/model_training.py
+Evaluation
+Generate evaluation metrics and visualizations:
 
+bash
+Copy
+Edit
+python scripts/model_evaluation.py
+Deployment
+Launch the web app:
 
-Usage
-
-Training: Run model_training.py to train the custom CNN and transfer learning models.
-Evaluation: Use model_evaluation.py to evaluate model performance and generate metrics/plots.
-Deployment: Use app.py to launch the Streamlit app for real-time predictions.
-
-Requirements
-
+bash
+Copy
+Edit
+streamlit run app.py
+🧾 Requirements
 Python 3.8+
-See requirements.txt for detailed dependencies.
 
-Deliverables
+TensorFlow
 
-Trained models (custom_cnn.h5, transfer_learning_model.h5)
-Streamlit application (app.py)
-Python scripts for preprocessing, training, and evaluation
-Model comparison via evaluation metrics
-Public GitHub repository with this README
+Streamlit
+
+NumPy
+
+Matplotlib
+
+Seaborn
+
+Scikit-learn
+
+Pillow
+
+Altair
+
+📄 All dependencies are listed in requirements.txt.
+
+📦 Deliverables
+✅ Trained models: custom_cnn.h5, transfer_learning_model.h5
+
+✅ Streamlit application: app.py
+
+✅ Complete pipeline scripts: Preprocessing, training, evaluation
+
+✅ Model comparison through evaluation metrics
+
+✅ Public GitHub repository with documentation
+
+👩‍💻 Author
+Rathi Priya
+Brain Tumor Classification using Deep Learning | 2025
